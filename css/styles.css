@@ -1016,6 +1016,10 @@ img {
     display: none;
   }
 
+  .home__container{
+    margin-top: 4.5rem;
+  }
+
   .nav__logo{
     margin-left: .5rem;
   }
