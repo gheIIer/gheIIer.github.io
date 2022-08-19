@@ -615,9 +615,9 @@ img {
 .qualification__button{
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
-  background-color: var(--background-color);
+  background-color: var(--input-color);
   color: var(--text-color);
-  padding: 0.75rem;
+  padding: 0.5rem 0.75rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
   transition: ease-in-out 0.2s;
@@ -715,7 +715,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .45);
+  background-color: rgba(0, 0, 0, .85);
   display: flex;
   align-items: center;
   justify-content: center;
