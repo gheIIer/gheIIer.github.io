@@ -370,6 +370,7 @@ img {
 .button__icon{
   font-size: 1.25rem;
   transition: .3s;
+  margin-left: 3px;
 }
 
 .button--white{
