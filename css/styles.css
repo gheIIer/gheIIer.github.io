@@ -1012,6 +1012,9 @@ img {
   .project__img{
     width: 200px;
   }
+  .swiper-pagination-bullets{
+    display: none;
+  }
 }
 
 
