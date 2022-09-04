@@ -160,12 +160,28 @@ img {
   background-color: var(--body-color);
 }
 
+.blog-header {
+  width: 100%;
+  position: fixed;
+  bottom: initial;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
 /*==================== NAV ====================*/
 .nav{
   max-width: 1136px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.back-button{
+  font-size: 2.5rem;
+  color: var(--text-color);
+  justify-content: center;
   align-items: center;
 }
 
@@ -176,6 +192,8 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .nav__logo{
@@ -205,8 +223,26 @@ img {
   color: var(--first-color);
 }
 
+.blog-references{
+  display: flex;
+}
+
 @media screen and (max-width: 767px){
   .nav__menu{
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: .3s;
+  }
+}
+
+@media screen and (max-width: 50px){
+  .blog-nav__menu{
     position: fixed;
     bottom: -100%;
     left: 0;
@@ -243,6 +279,13 @@ img {
 
 .blog-nav__icon{
   font-size: 1.7rem;
+  transition: .3s ease-in-out;
+  margin-left: 8px;
+  margin-right: 8px;
+
+}
+.blog-nav__icon:hover{
+  color: var(--first-color-second);
 }
 
 .nav__close{
@@ -1092,8 +1135,14 @@ img {
     bottom: initial;
   }
 
+  .blog-header{
+    top: 0;
+    bottom: initial;
+  }
+
   .header,
   .main,
+  .blog-header,
   .footer__container{
     padding: 0 1rem;
   }
@@ -1103,6 +1152,11 @@ img {
     column-gap: 1rem;
   }
 
+  .blog-nav{
+    height: calc(var(--header-height) + .5rem);
+    column-gap: 1rem;
+  }
+  
   .nav__icon,
   .nav__close,
   .nav__toggle{
@@ -1116,6 +1170,10 @@ img {
   .nav__logo{
     margin-left: .5rem;
   }
+  .blog-nav__menu{
+    margin-left: .5rem;
+  }
+
   .nav__list{
     display: flex;
     column-gap: 2rem;
@@ -1211,6 +1269,10 @@ img {
   }
   .project__data{
     padding-top: .8rem;
+  }
+  .nav__logo-img{
+    height: 45px;
+    width: auto;
   }
 
 }
