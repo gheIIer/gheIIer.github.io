@@ -26,6 +26,7 @@
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     --background-color: #1E1E1E;
     --container-color: #1B1B1E;
+    --blog-background-color: #111214;
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -161,16 +162,31 @@ img {
 
 /*==================== NAV ====================*/
 .nav{
-  max-width: 968px;
+  max-width: 1136px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.blog-nav{
+  max-width: 1136px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
 .nav__logo{
   color: var(--first-color);
 }
+
+.nav__logo-img{
+  height: 35px;
+  width: auto;
+}
+
 .nav__toggle{
   color: white;
   font-weight: var(--font-medium);
@@ -223,6 +239,10 @@ img {
 
 .nav__icon{
   font-size: 1.2rem;
+}
+
+.blog-nav__icon{
+  font-size: 1.7rem;
 }
 
 .nav__close{
