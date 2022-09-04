@@ -156,6 +156,7 @@ img {
   position: fixed;
   bottom: 0;
   left: 0;
+  margin: auto;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
 }
@@ -171,7 +172,7 @@ img {
 
 /*==================== NAV ====================*/
 .nav{
-  max-width: 1136px;
+  max-width: 1080px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -181,8 +182,11 @@ img {
 .back-button{
   font-size: 2.5rem;
   color: var(--text-color);
-  justify-content: center;
-  align-items: center;
+  transition: .3s;
+}
+.back-button:hover{
+  color: #2CB67D;
+  margin-left: -10px;
 }
 
 .blog-nav{
@@ -233,6 +237,7 @@ img {
     bottom: -100%;
     left: 0;
     width: 100%;
+    margin: auto;
     background-color: var(--body-color);
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
@@ -995,6 +1000,10 @@ img {
   margin-bottom: .75rem;
 }
 
+/*==================== BLOG POST 1 ====================*/
+
+/*==================== BLOG POST 2 ====================*/
+
 
 /*========== SCROLL UP ==========*/
 .scrollup{
@@ -1030,7 +1039,7 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px){
+@media screen and (max-width: 550px){
   .container{
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1092,6 +1101,14 @@ img {
   .home__img{
     order: 1;
     justify-self: center;
+  }
+
+  .nav__logo{
+    margin-left: 10px;
+  }
+
+  .nav__toggle{
+    margin-right: 10px;
   }
 
   .about__container,
