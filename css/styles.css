@@ -117,6 +117,10 @@ img {
   height: auto;
 }
 
+::selection {
+  background: #31d792;
+}
+
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
   padding: 2rem 0 4rem;
@@ -187,6 +191,10 @@ img {
 .back-button:hover{
   color: #2CB67D;
   margin-left: -10px;
+}
+
+.blog-logo-section{
+  margin-left: 10px;
 }
 
 .blog-nav{
