@@ -207,6 +207,7 @@ img {
 .nav__logo-img{
   height: 35px;
   width: auto;
+  margin-bottom: -5px;
 }
 
 .nav__toggle{
