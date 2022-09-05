@@ -9,10 +9,12 @@
 
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="css/styles.css">
+        
 
         <title>Gheller's Blog</title>
 
         <link rel="icon" href="img/FavIcon2.png">
+
     </head>
     <body style="background-color: var(--blog-background-color);">
         <!--==================== HEADER ====================-->
@@ -45,8 +47,48 @@
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== POSTS ====================-->
+            <section class="posts section">
+                <div class="posts-list">
+                    <div>
+                        <article class="blog-article-1">
+                            <a href="blog1.html" class="img-container">
+                                <img class="article-img" src="./img/post1.png" alt="">
+                            </a>
+                            <div class="article-title-section">
+                                <a href="post1.html">
+                                    <header class="article-topic">
 
-        </main>>
+                                        <div class="article-top">
+                                            <span class="article-class">
+                                                <div class="article-top-title">
+                                                    <i class="uil uil-fire article-class-icon"></i>
+                                                    <p id="website"></p> 
+                                                </div>
+                                            </span>
+                                            <a href='https://github.com/gheller3310/gheller3310.github.io/releases/tag/v1.3.0' target='_blank' class="website-version">
+                                                <i class="uil uil-tag-alt article-release-icon"></i>
+                                                <p id="version1"></p>
+                                            </a>
+                                        </div>
+                                        <a href="post1.html">
+                                            <h2 class="article-title">
+                                                <p id="title1"></p>
+                                            </h2>
+
+                                            <p class="article-paragraph" id="subtitle1"></p>
+                                        </a>
+                                        <div class="article-date">
+                                            <p id="date1" class="article-date-spacing"></p>
+                                            <p id="min1"></p>
+                                        </div>
+                                    </header>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!--==================== SCROLL TOP ====================-->
         <a href="#" class="scrollup" id="scroll-up">
@@ -54,6 +96,27 @@
         </a>
 
         <!--==================== MAIN JS ====================-->
-        <script src="js/main.js"></script>
+        <script src="js/objects.js"></script>
+        <script>
+            document.getElementById("website").innerHTML = website;
+        </script> 
+        <script>
+            document.getElementById("project").innerHTML = project;
+        </script>
+        <script>
+            document.getElementById("version1").innerHTML = v1;
+        </script>
+        <script>
+            document.getElementById("title1").innerHTML = title1;
+        </script>
+        <script>
+            document.getElementById("subtitle1").innerHTML = subtitle1;
+        </script>
+        <script>
+            document.getElementById("date1").innerHTML = date1;
+        </script>
+        <script>
+            document.getElementById("min1").innerHTML = min1;
+        </script>
     </body>
 </html>

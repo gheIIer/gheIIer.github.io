@@ -15,6 +15,9 @@
     --first-color-alt: #7B7BEB;
     --first-color-second: #2CB67D;
     --paragraph: #94A1B2;
+    --article-paragraph: #979797;
+    --article-subtitle: #5F5F5F;
+    --article-date: #727373;
     --first-color-lighter: #c8c6f6;
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: #FFFFFE;
@@ -1008,10 +1011,104 @@ img {
   text-align: center;
   margin-bottom: .75rem;
 }
+/*==================== BLOG POSTS ====================*/
+.posts{
 
-/*==================== BLOG POST 1 ====================*/
+}
 
-/*==================== BLOG POST 2 ====================*/
+.posts-list{
+  margin: 0 auto;
+  max-width: 1200px;
+  width:100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.blog-article-1{
+  display: flex;
+  padding: 16px;
+  margin-top: 2rem;
+}
+
+.article-img{
+  border-radius: 25px;
+  max-width: auto;
+  max-height: 100%;
+  height: 420px;
+  width: 830px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.article-topic{
+  margin-left: 3rem;
+}
+
+.article-class{
+  color: var(--article-subtitle);
+}
+
+.article-class-icon{
+  margin-right: 2px;
+  color: rgb(199, 56, 56);
+  transition: .6s;
+}
+
+.article-class-icon:hover{
+  color: rgb(44, 111, 245);
+}
+
+.article-release-icon{
+  margin-right: 2px;
+}
+
+.website-version{
+  display: flex;
+  color: var(--text-color);
+  letter-spacing: 1.3px;
+  transition: .2s;
+}
+
+.website-version:hover{
+  text-decoration: underline;
+}
+
+.article-top{
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.article-top-title{
+  display: flex;
+  margin-right: 5px;
+}
+
+.article-title{
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 50px;
+  margin-bottom: 14px;
+}
+
+.article-paragraph{
+  color: var(--article-paragraph);
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.article-date{
+  display: flex;
+  font-size: smaller;
+  color: var(--article-date);
+}
+
+.article-date-spacing{
+  margin-right: 3px;
+}
+
+
+/*==================== BLOG POST TYPE 1 ====================*/
+
+/*==================== BLOG POST TYPE 2 ====================*/
 
 
 /*========== SCROLL UP ==========*/
@@ -1099,6 +1196,7 @@ img {
 }
 
 
+
 /* For medium devices */
 @media screen and (min-width: 568px){
   .home__content{
@@ -1136,6 +1234,56 @@ img {
     display: grid;
     grid-template-columns: .6fr;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .blog-article-1{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .article-title-section{
+    margin-top: 1rem;
+  }
+  .article-img{
+    width: 690px;
+    height: auto;
+  }
+  .article-top{
+    margin-bottom: 3px;
+    font-size: 15px;
+  }
+  .article-title{
+    font-size: 36px;
+    margin-bottom: 3px;
+  }
+}
+
+@media screen and (max-width: 676px){
+  .article-title{
+    font-size: 28px;
+    margin-bottom: -5px;
+  }
+  .article-top{
+    margin-bottom: -2px;
+    font-size: 13px;
+  }
+  .article-paragraph{
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .article-date{
+    color: var(--article-subtitle);
+  }
+}
+
+@media screen and (max-width: 767px){
+  .posts-list{
+    margin-top: 6rem;
+  }
+  .back-button{
+    font-size: 32px;
   }
 }
 
