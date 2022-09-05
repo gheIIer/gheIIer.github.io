@@ -176,7 +176,7 @@ img {
   bottom: initial;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--transparent);
 }
 
 /*==================== NAV ====================*/
@@ -1476,6 +1476,12 @@ img {
   }
   .contact__inputs{
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .blog-header{
+    background-color: var(--blog-background-color);
   }
 }
 
