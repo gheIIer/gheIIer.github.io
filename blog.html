@@ -18,7 +18,7 @@
     </head>
     <body style="background-color: var(--blog-background-color);">
         <!--==================== HEADER ====================-->
-        <header class="blog-header" id="header" style="background-color: var(--blog-background-color);">
+        <header class="blog-header" id="header" style="background-color: var(--transparent)">
             <nav class="blog-nav container">
                 <div class="blog-logo-section">
                     <a href="https://gheller.art" class="back-button">
@@ -51,6 +51,45 @@
                 <div class="posts-list">
                     <div>
                         <article class="blog-article-1">
+                            <a href="blog2.html" class="img-container">
+                                <img class="article-img" src="./img/post1.png" alt="">
+                            </a>
+
+                            <div class="article-title-section">
+                                <a href="post2.html">
+                                    <header class="article-topic">
+
+                                        <div class="article-top">
+                                            <span class="article-class">
+                                                <div class="article-top-title">
+                                                    <i class="uil uil-fire article-class-icon"></i>
+                                                    <p id="website">Website •</p> 
+                                                </div>
+                                            </span>
+                                            <a href='https://github.com/gheller3310/gheller3310.github.io/releases/tag/v1.3.1' target='_blank' class="website-version">
+                                                <i class="uil uil-tag-alt article-release-icon"></i>
+                                                <p id="version2"></p>
+                                            </a>
+                                        </div>
+                                        <a href="post2.html">
+                                            <h2 class="article-title">
+                                                <p id="title2"></p>
+                                            </h2>
+
+                                            <p class="article-paragraph" id="subtitle2"></p>
+                                        </a>
+                                        <div class="article-date">
+                                            <p id="date2" class="article-date-spacing"></p>
+                                            <p id="min2"></p>
+                                        </div>
+                                    </header>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="blog-article-1">
                             <a href="blog1.html" class="img-container">
                                 <img class="article-img" src="./img/post1.png" alt="">
                             </a>
@@ -62,7 +101,7 @@
                                             <span class="article-class">
                                                 <div class="article-top-title">
                                                     <i class="uil uil-fire article-class-icon"></i>
-                                                    <p id="website"></p> 
+                                                    <p id="website">Website •</p> 
                                                 </div>
                                             </span>
                                             <a href='https://github.com/gheller3310/gheller3310.github.io/releases/tag/v1.3.0' target='_blank' class="website-version">
@@ -86,6 +125,7 @@
                             </div>
                         </article>
                     </div>
+                    
                 </div>
             </section>
         </main>
@@ -118,5 +158,21 @@
         <script>
             document.getElementById("min1").innerHTML = min1;
         </script>
+        <script>
+            document.getElementById("version2").innerHTML = v2;
+        </script>
+        <script>
+            document.getElementById("title2").innerHTML = title2;
+        </script>
+        <script>
+            document.getElementById("subtitle2").innerHTML = subtitle2;
+        </script>
+        <script>
+            document.getElementById("date2").innerHTML = date2;
+        </script>
+        <script>
+            document.getElementById("min2").innerHTML = min2;
+        </script>
+        
     </body>
 </html>
