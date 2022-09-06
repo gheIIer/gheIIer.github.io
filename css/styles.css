@@ -1051,14 +1051,26 @@ img {
   color: var(--article-subtitle);
 }
 
-.article-class-icon{
+.article-class-icon-fire{
   margin-right: 2px;
   color: rgb(199, 56, 56);
   transition: .6s;
 }
 
-.article-class-icon:hover{
+.article-class-icon-fire:hover{
   color: rgb(44, 111, 245);
+}
+
+.article-class-icon-book{
+  margin-top: -2px;
+  margin-right: 2px;
+  color: rgb(215, 161, 60);
+  font-size: 18px;
+  transition: .6s;
+}
+
+.article-class-icon-book:hover{
+  color: rgb(110, 208, 40);
 }
 
 .article-release-icon{

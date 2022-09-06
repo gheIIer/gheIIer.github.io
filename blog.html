@@ -52,7 +52,7 @@
                     <div>
                         <article class="blog-article-1">
                             <a href="blog2.html" class="img-container">
-                                <img class="article-img" src="./img/post2.png" alt="">
+                                <img class="article-img" src="./img/post-img/post3.png" alt="">
                             </a>
 
                             <div class="article-title-section">
@@ -62,7 +62,46 @@
                                         <div class="article-top">
                                             <span class="article-class">
                                                 <div class="article-top-title">
-                                                    <i class="uil uil-fire article-class-icon"></i>
+                                                    <i class="uil uil-book-alt article-class-icon-book"></i>
+                                                    <p id="notes">Notes •</p> 
+                                                </div>
+                                            </span>
+                                            <a href='https://ethereum.org/en/' target='_blank' class="website-version">
+                                                <i class="uil uil-tag-alt article-release-icon"></i>
+                                                <p id="first">ethereum.org</p>
+                                            </a>
+                                        </div>
+                                        <a href="post2.html">
+                                            <h2 class="article-title">
+                                                <p id="title3"></p>
+                                            </h2>
+
+                                            <p class="article-paragraph" id="subtitle3"></p>
+                                        </a>
+                                        <div class="article-date">
+                                            <p id="date2" class="article-date-spacing"></p>
+                                            <p id="undefinedTime"></p>
+                                        </div>
+                                    </header>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="blog-article-1">
+                            <a href="blog2.html" class="img-container">
+                                <img class="article-img" src="./img/post-img/post2.png" alt="">
+                            </a>
+
+                            <div class="article-title-section">
+                                <a href="post2.html">
+                                    <header class="article-topic">
+
+                                        <div class="article-top">
+                                            <span class="article-class">
+                                                <div class="article-top-title">
+                                                    <i class="uil uil-fire article-class-icon-fire"></i>
                                                     <p id="website">Website •</p> 
                                                 </div>
                                             </span>
@@ -91,7 +130,7 @@
                     <div>
                         <article class="blog-article-1">
                             <a href="post1.html" class="img-container">
-                                <img class="article-img" src="./img/post1.png" alt="">
+                                <img class="article-img" src="./img/post-img/post1.png" alt="">
                             </a>
                             <div class="article-title-section">
                                 <a href="post1.html">
@@ -100,7 +139,7 @@
                                         <div class="article-top">
                                             <span class="article-class">
                                                 <div class="article-top-title">
-                                                    <i class="uil uil-fire article-class-icon"></i>
+                                                    <i class="uil uil-fire article-class-icon-fire"></i>
                                                     <p id="website">Website •</p> 
                                                 </div>
                                             </span>
@@ -144,6 +183,9 @@
             document.getElementById("project").innerHTML = project;
         </script>
         <script>
+            document.getElementById("notes").innerHTML = notes;
+        </script> 
+        <script>
             document.getElementById("version1").innerHTML = v1;
         </script>
         <script>
@@ -173,6 +215,18 @@
         <script>
             document.getElementById("min2").innerHTML = min2;
         </script>
-        
+        <script>
+            document.getElementById("first").innerHTML = first;
+        </script>
+        <script>
+            document.getElementById("title3").innerHTML = title3;
+        </script>
+        <script>
+            document.getElementById("subtitle3").innerHTML = subtitle3;
+        </script>
+        <script>
+            document.getElementById("undefinedTime").innerHTML = undefinedTime;
+        </script>
+
     </body>
 </html>
