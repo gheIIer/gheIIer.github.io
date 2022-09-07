@@ -1,0 +1,736 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>FOUNDATIONAL TOPICS</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #111214;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: #FFFFFE;
+;
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="da034917-30f2-4f07-8b07-8864a7ea13a6" class="page sans"><header><img class="page-cover-image" src="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/cover-image.webp" style="object-position:center 24.039999999999996%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🏭</span></div><h1 class="page-title">FOUNDATIONAL TOPICS</h1></header><div class="page-body"><h1 id="5a57127b-058b-4151-a5d6-fae058dbee56" class="">BLOCKCHAIN FUNDAMENTALS</h1><hr id="ac7fc3e8-a178-477b-a1b0-c335c2355588"/><p id="e19c7306-1db3-4a87-957c-c406120f1419" class="">A blockchain is a <mark class="highlight-red">public database</mark> that is updated and shared across many computers in a network.</p><p id="9b60a0d8-f407-41d4-9cfe-f38e3415685c" class="">“<mark class="highlight-red">Block</mark>” refers to data and state being stored in consecutive groups known as “blocks”. If you send ETH to someone else, the transaction data needs to be added to a block to be successful.</p><p id="1afa1a9f-4de0-4baa-9385-4bcd9cc4786c" class="">“<mark class="highlight-red">Chain</mark>” refers to the fact that each block cryptographically references its parent. In other words, blocks get chained together. The data in a block cannot change without changing all subsequent blocks, which would require the consensus of the entire network.</p><p id="9dc452fa-ebe7-41bd-8be7-a63db56871c5" class="">Every computer in the network must agree upon each new block and the chain as a whole. These computers are known as “<mark class="highlight-red">nodes</mark>”. Nodes ensure everyone interacting with the blockchain has the same data. To accomplish this distributed agreement, blockchains need a consensus mechanism, which in Ethereum’s case is Proof of Work, were miners mine a new block for every requested transaction. However, those miners benefit richer orders other than smaller ones.</p><p id="725fe7a4-c9fc-4833-99db-515815846a2e" class="">New blocks are broadcast to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.</p><h3 id="faa76fb9-77b8-47ae-8b3b-1cc394cd9999" class="">WHAT IS ETHEREUM?</h3><hr id="39a619a8-6fc2-4964-8432-8146fb9b9ed8"/><p id="f76ac6e1-2c31-4a4e-bddf-527b7f1dab69" class="">In the Ethereum universe, there is a single, canonical computer (called the Ethereum Virtual Machine, or EVM) whose state everyone on the network agrees on.
+Everyone who participates in the Ethereum network (every Ethereum node) keeps a copy of the state of this computer. Additionally, any participant can broadcast a request for this computer to perform arbitrary computation. Whenever such a request is broadcast, other participants on the network verify, validate, and carry out (”execute”) the computation. This execution causes a state change in the EVM, which is committed and propagated throughout the entire network.</p><p id="8a07ce28-faa3-4df7-94b2-4a495aea59dc" class="">Requests for computation are called <mark class="highlight-red">transaction requests</mark>; the record of all transactions and the EVM’s present state gets stored on the blockchain, which in turn is stored and agreed upon by all nodes.</p><p id="400eb1d5-de36-428c-b27c-2033dce55a48" class="">Cryptographic mechanisms ensure that once transactions are verified as valid and added to the blockchain, they can’t be tampered with later. The same mechanism also ensure that all the transactions are signed and executed with appropriate “permission” (no one should be able to send digital assets from Alice’s account, except for Alice herself).</p><h2 id="852283aa-b3dd-4057-b831-21cf0a11fa75" class="">WHAT IS ETHER?</h2><hr id="0bdf029e-9709-4981-8b0d-49f0ab7d89bf"/><p id="94dcf0df-36b9-4ddf-b052-9aed97a432bf" class=""><strong>Ether (ETH)</strong> is the native cryptocurrency of Ethereum. The purpose of ether is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transactions requests and provide computational resources to the network.</p><p id="f44afca2-b743-4ae6-a21c-4551f36cfe6a" class="">Any participant who broadcasts a transaction request must also offer some amount to ether to the network as bounty. This bounty will be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.</p><p id="26a1609a-80d4-4544-8fa2-33ea8328715e" class="">The amount of ether paid corresponds to the time required to do the computation. These bounties also prevent malicious participants from intentionally clogging the network by requesting the execution of infinite computation or other resource-intensive scripts, as these participants must pay for computation time.</p><h2 id="afe65e3d-153d-432d-b5cb-eae0122aba5b" class="">WHAT ARE SMART CONTRACTS?</h2><hr id="4a2559c0-7618-4488-b176-884a6f6c65e6"/><p id="a36234ad-bdbd-4a1f-81c4-1583f997c08c" class="">In practice, participants don’t write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM state, and users make requests to execute these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.</p><p id="1ea470aa-adf4-4942-9d23-6dff9ca19392" class="">At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ETH to a specific recipient.</p><p id="5b9e33c1-2382-4d96-ad9d-252f6eba6acd" class="">Any developer can create a smart contract and make it public to the network, using the blockchain as its data layer, for a fee paid to the network. Any user can then call the smart contract to execute its code, again for a fee paid to the network.</p><p id="afae51a6-86c8-46ad-8dad-013d45b6dc9a" class="">Thus, with smart contracts, developers can build and deploy arbitrarily complex user-facing apps and services such as: marketplaces, financial instruments, games, etc.</p><h1 id="45b4c463-569c-4979-8f59-be351a60d46b" class="">INTRO TO dAPPS</h1><hr id="63b9ee30-9a5c-40bb-a754-39b9dc5eddd7"/><p id="57eaba5d-a351-498e-a978-10b6329b6662" class="">A dApp has its backend code running on a decentralized peer-to-peer network. Contrast this with an app where the backend code is running on centralized servers.</p><ul id="17f019dd-b15c-4bf4-be77-e2ff0ea9c61d" class="bulleted-list"><li style="list-style-type:disc"><strong>Decentralized</strong> - dApps operate on Ethereum, an open public decentralized platform where no one person or group has control</li></ul><ul id="917e23bb-7e27-432d-91d6-0b4aa6f45bf5" class="bulleted-list"><li style="list-style-type:disc"><strong>Deterministic</strong> - dApps perform the same function irrespective of the enviroment in which they get executed</li></ul><ul id="664ebfa2-fe8d-472e-885f-95fcc437e6fd" class="bulleted-list"><li style="list-style-type:disc"><strong>Turin complete</strong> - dApps can perform any action given the required resources</li></ul><ul id="a420dfe1-52a6-4197-9399-68bdb50c5f58" class="bulleted-list"><li style="list-style-type:disc"><strong>Isolated</strong> - dApps are executed in a virtual enviroment known as Ethereum Virtual Machine sao that if the smart contract has a bug, it won’t hamper the normal functioning of the blockchain network</li></ul><p id="ee58e0cc-2dc6-496b-a2ed-2cb7f4c56aef" class="">
+</p><p id="c2ce9de5-e1e0-4600-85ba-6c5ba57704f1" class="">To introduce dApps, we need to introduce smart contracts – a dApp&#x27;s backend for lack of a better term. For a detailed overview, head to our section on <a href="https://ethereum.org/en/developers/docs/smart-contracts/">smart contracts</a>.</p><p id="e41d793e-6e52-4055-998b-dc123b988b24" class="">A smart contract is code that lives on the Ethereum blockchain and runs exactly as programmed. Once smart contracts are deployed on the network you can&#x27;t change them. dApps can be decentralized because they are controlled by the logic written into the contract, not an individual or company. This also means you need to design your contracts very carefully and test them thoroughly.</p><h2 id="9cfc2c7b-bea8-4288-9b93-3a718e5ea94b" class="">BENEFITS OF APP DEVELOPMENT</h2><hr id="f0795366-7d70-4776-9cf4-64fc717a258c"/><p id="2ed7949f-b56d-45ae-af3b-d2c616842670" class=""><strong>Zero downtime</strong> - Once the smart contract is deployed on the blockchain, the network as a whole will always be able to serve clients looking to interact with the contract. Malicious actors, therefore, cannot launch denial-of-service attacks targeted towards individual dApps.</p><ul id="47aad4dd-7fd3-4a43-b3b7-0e784a43c47e" class="bulleted-list"><li style="list-style-type:disc"><strong>Privacy</strong> - You don’t need to provide real-world identity to deploy or interact with a dApp.</li></ul><ul id="3c42dd9a-587b-4e37-87b8-fb7bde46c61f" class="bulleted-list"><li style="list-style-type:disc"><strong>Resistance to censorship</strong> - No single entity on the network can block users from submitting transactions, deploying dApps, or reading data from the blockchain.</li></ul><ul id="f27f11bf-5b2e-46ae-a6e6-0f87985898ad" class="bulleted-list"><li style="list-style-type:disc"><strong>Complete data integrity </strong>- Data stored on the blockchain is immutable and indisputable, thanks to cryptographic primitives. Malicious actors cannot forge transactions or other data that has already been made public.</li></ul><ul id="2131bf5d-95f0-4fe7-8096-d8705db740c4" class="bulleted-list"><li style="list-style-type:disc"><strong>Trustless computation/verifiable behavior</strong> – Smart contracts can be analyzed and are guaranteed to execute in predictable ways, without the need to trust a central authority. This is not true in traditional models; for example, when we use online banking systems, we must trust that financial institutions will not misuse our financial data, tamper with records, or get hacked.</li></ul><h2 id="b5bd3e61-952c-420f-b883-06978ed90749" class=""><strong><strong>DRAWBACKS OF DAPP DEVELOPMENT</strong></strong></h2><hr id="3a7e858e-f6d6-4fa8-bffc-ba2406a7116b"/><ul id="1489d40d-5526-433f-9e03-48f12bec2ab8" class="bulleted-list"><li style="list-style-type:disc"><strong>Maintenance</strong> – Dapps can be harder to maintain because the code and data published to the blockchain are harder to modify. It’s hard for developers to make updates to their dapps (or the underlying data stored by a dapp) once they are deployed, even if bugs or security risks are identified in an old version.</li></ul><ul id="0ea75493-d055-49d5-9a51-78e76b0f6cd9" class="bulleted-list"><li style="list-style-type:disc"><strong>Performance overhead</strong> – There is a huge performance overhead, and scaling is really hard. To achieve the level of security, integrity, transparency, and reliability that Ethereum aspires to, every node runs and stores every transaction. On top of this, proof-of-work takes time as well. A back-of-the-envelope calculation puts the overhead at something like 1,000,000x that of standard computation currently.</li></ul><ul id="2d9120dd-7c0a-43f9-ab3a-ea1307fa69a7" class="bulleted-list"><li style="list-style-type:disc"><strong>Network congestion</strong> – When one dapp uses too many computational resources, the entire network gets backed up. Currently, the network can only process about 10-15 transactions per second; if transactions are being sent in faster than this, the pool of unconfirmed transactions can quickly balloon.</li></ul><ul id="76a2d705-665b-414a-914d-b07f6fd10de8" class="bulleted-list"><li style="list-style-type:disc"><strong>User experience</strong> – It may be harder to engineer user-friendly experiences because the average end-user might find it too difficult to set up a tool stack necessary to interact with the blockchain in a truly secure fashion.</li></ul><ul id="46328e86-b509-4f24-b462-6dbbde29ca00" class="bulleted-list"><li style="list-style-type:disc"><strong>Centralization</strong> – User-friendly and developer-friendly solutions built on top of the base layer of Ethereum might end up looking like centralized services anyways. For example, such services may store keys or other sensitive information server-side, serve a frontend using a centralized server, or run important business logic on a centralized server before writing to the blockchain. Centralization eliminates many (if not all) of the advantages of blockchain over the traditional model.</li></ul><figure id="d107e35e-8159-4a28-8d4d-a449f0003a76"><div class="source"><a href="https://www.youtube.com/watch?v=F50OrwV6Uk8">https://www.youtube.com/watch?v=F50OrwV6Uk8</a></div></figure><h2 id="1fcb4a78-23a5-4864-a3b1-e4fb381ca8fa" class=""><strong>TOOLS FOR CREATING DAPPS</strong></h2><hr id="3472c9fd-1166-46a4-90d9-8a71d9755934"/><p id="b6f9b41f-623b-486e-a4bb-766c9109d944" class=""><strong>Scaffold-ETH </strong><em><strong>- Quickly experiment with Solidity using a frontend that adapts to your smart contract.</strong></em></p><ul id="3e9c20f6-2de9-4a8d-b129-1e9f7b65d097" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/austintgriffith/scaffold-eth">GitHub</a></li></ul><ul id="089c254d-24d9-4921-ae3e-9f14c27bab61" class="bulleted-list"><li style="list-style-type:disc"><a href="https://punkwallet.io/">Example dapp</a></li></ul><p id="818100d7-c34a-4a13-953e-bf1c5ce38d7e" class=""><strong>Create Eth App </strong><em><strong>- Create Ethereum-powered apps with one command.</strong></em></p><ul id="c1792084-a3eb-4c1a-bb53-bb87dede1e0f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/paulrberg/create-eth-app">GitHub</a></li></ul><p id="a4a58992-1c6c-4b4f-819b-7cbe56dfb4a7" class=""><strong>One Click Dapp </strong><em><strong>- FOSS tool for generating dapp frontends from an </strong></em><a href="https://ethereum.org/en/glossary/#abi"><em><strong>ABI</strong></em></a><em><strong>.</strong></em></p><ul id="bf991278-db24-4b0a-b5b3-af43212f46e3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://oneclickdapp.com/">oneclickdapp.com</a></li></ul><ul id="3868e715-162b-4e1e-a886-454ca2e42585" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/oneclickdapp/oneclickdapp-v1">GitHub</a></li></ul><p id="d9f80c93-f5d4-4484-aa6d-fc157b5ba8eb" class=""><strong>Etherflow </strong><em><strong>- FOSS tool for Ethereum developers to test their node, and compose &amp; debug RPC calls from the browser.</strong></em></p><ul id="8ab62bdb-25ec-419d-8d04-95de3363ba5d" class="bulleted-list"><li style="list-style-type:disc"><a href="https://etherflow.quiknode.io/">etherflow.quiknode.io</a></li></ul><ul id="7ae30578-2ece-49ee-a259-11258b3fb2da" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/abunsen/etherflow">GitHub</a></li></ul><h1 id="a972b82b-b06a-4f9b-8e03-94b42653b972" class="">ETHEREUM ACCOUNTS</h1><h2 id="8c221265-061d-4bdf-90fd-4208ac1cbb39" class="">ACCOUNT TYPES</h2><hr id="2581a0fd-661c-4ecf-b794-837fb443aa8d"/><p id="fe6b066e-2f6e-4328-966c-8387ff7705b6" class="">Ethereum has two account types:</p><ul id="71f16d80-e8bf-460a-b110-dddb5df830cf" class="bulleted-list"><li style="list-style-type:disc"><strong>Externally-owned</strong> - controlled by anyone with the private keys</li></ul><ul id="ef605bd3-b348-4761-925c-ede3c9711442" class="bulleted-list"><li style="list-style-type:disc"><strong>Contract</strong> - a smart contract deployed to the network, controlled by code</li></ul><p id="cb59d3a2-842c-4b5e-af49-e3b40e66046b" class="">
+</p><p id="ed3479e9-d5de-4ec1-bbad-f794aabd387a" class="">Both account types have the ability to:</p><ul id="07b60fdc-cd9b-4958-a330-5a33229887b3" class="bulleted-list"><li style="list-style-type:disc">Receive, hold and send ETH and tokens</li></ul><ul id="68ef8f96-6c71-4bd9-bb40-ead0937ff073" class="bulleted-list"><li style="list-style-type:disc">Interact with deployed smart contracts</li></ul><h3 id="3fcbfb6c-881e-42fb-a1f1-092c7df112b9" class="">Key differences</h3><p id="f990abb0-fefb-4959-a767-dc32cc184c77" class=""><strong>Externally-owned</strong></p><ul id="4680cfd9-a717-482a-a55c-d17109893040" class="bulleted-list"><li style="list-style-type:disc">Creating an account costs nothing</li></ul><ul id="0ead7161-fd18-47e4-b981-1b543e8d6cf4" class="bulleted-list"><li style="list-style-type:disc">Can initiate transactions</li></ul><ul id="356ce8a0-8f6f-4603-95ae-61352e100390" class="bulleted-list"><li style="list-style-type:disc">Transactions between externally-owned accounts can only be ETH/token transfers</li></ul><p id="ac070cab-4d3a-445b-a8a8-e1eacdb6cda7" class="">
+</p><p id="21a689dc-35ed-4eb5-9216-5f1cb275807b" class=""><strong>Contract</strong></p><ul id="b1ffb0fb-0ba5-413b-91e7-b400a1dc401f" class="bulleted-list"><li style="list-style-type:disc">Creating a contract has a cost because you’re using network storage</li></ul><ul id="c8bd128e-012b-454a-a085-a5bb14e8cb42" class="bulleted-list"><li style="list-style-type:disc">Can only send transactions in response to receiving a transaction</li></ul><ul id="d16250ae-047a-4379-86ed-4804e1e869ea" class="bulleted-list"><li style="list-style-type:disc">Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract</li></ul><h2 id="e549dcc9-ac78-4c94-a305-86ea09042682" class="">AN ACCOUNT EXAMINED</h2><hr id="ad9d1f8e-6e73-49de-b479-a6f13d3b26c1"/><p id="4c8d5989-4723-45e5-9e9d-c44c6dbf164c" class="">Ethereum accounts have four fields:</p><ul id="e2b7a748-f4fd-42f2-93de-d8ac2623dd5c" class="bulleted-list"><li style="list-style-type:disc"><code>nonce</code> - A counter that indicates the number of transactions sent from the account. This ensures transactions are only processed once. In a contract account, this number represents the number of contracts created by the account.</li></ul><ul id="2f14cab3-9041-4a85-9201-6f0e16c666ad" class="bulleted-list"><li style="list-style-type:disc"><code>balance</code> - The number of wei owned by this address. Wei is a denomination of ETH and there are 1e+18 wei per ETH.</li></ul><ul id="58a26611-adc8-4ba9-9cfc-4b18151f3aa7" class="bulleted-list"><li style="list-style-type:disc"><code>codeHash</code> - This hash refers to the <em>code</em> of an account on the Ethereum virtual machine (EVM). Contract accounts have code fragments programmed in that can perform different operations. This EVM code gets executed if the account gets a message call. It cannot be changed, unlike the other account fields. All such code fragments are contained in the state database under their corresponding hashes for later revival. This hash value is known as a codeHash. For externally owned accounts, the codeHash field is the hash of an empty string.</li></ul><ul id="605feb4f-b7d8-4502-8c8a-2e25b258b76d" class="bulleted-list"><li style="list-style-type:disc"><code>storageRoot</code> - Sometimes known as a storage hash. A 256-bit hash of the root node of a Merkle Patricia trie that encodes the storage contents of the account (a mapping between 256-bit-integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This trie encodes the hash of the storage contents of this account, and is empty by default.</li></ul><figure id="0c4d54f6-2c02-4c46-8540-eb54bb809930" class="image"><a href="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled.png"><img style="width:1080px" src="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled.png"/></a></figure><h2 id="cfae7231-b0af-4dc6-93cb-36fb0af7c6d3" class="">EXTERNALLY-OWNED ACCOUNTS AND KEY PAIRS</h2><hr id="e1e5a96b-5555-49a1-84bf-dcb621ce7ab7"/><p id="d1ecb4e9-1097-4a9e-9394-ef4851d2c7e3" class="">An account is made up of a cryptographic pair of keys: public and private. They help prove that a transaction was actually signed by the sender and prevent forgeries. Your private key is what you use to sign transactions, so it grants you custody over the funds associated with your account. You never really hold cryptocurrency, you hold private keys - the funds are always on Ethereum’s ledger.</p><p id="9013e45b-4586-4db3-875b-38e2db12e92a" class="">This prevents malicious actors from broadcasting fake transactions because you can always verify the sender of a transaction.</p><p id="7873b35f-e48a-43e0-865a-7c2a498848bb" class="">If Alice wants to send from her own account to Bob’s account, Alice needs to create a transaction request and send it out to the network for verification. Ethereum’s usage of public-key cryptography ensures that Alice can prove that she originally initiated the transaction request. Without cryptographic mechanism, a malicious adversary Eve could simply publicly broadcast a request that looks something like “Send 5 ETH from Alice’s account to Eve’s account”, and no one would be able to verify that it didn’t come from Alice.</p><h2 id="905064bf-593a-49bb-8902-6b895a9a7f57" class="">ACCOUNT CREATION</h2><hr id="b80eade4-9311-458e-b38d-bf5dee9a5417"/><p id="5581818b-33b3-4cbd-b0ff-4f4dbef5df77" class="">When you want to create an account most libraries will generate you a random private key.</p><p id="9f73094a-92d2-44d0-9ca9-8086fe3098f9" class="">A private key is made up of 64 hex characters and can be encrypted with a password.</p><p id="1febe8fa-557f-4714-a0ec-b5a5adab333e" class="">Example:</p><p id="4250920d-d2ee-4409-b5ec-c5ce6d26d19b" class=""><code>fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f</code></p><p id="15258942-a105-47ac-94d3-6b30314dc4b6" class="">The public key is generated from the private key using the <a href="https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">Elliptic Curve Digital Signature Algorithm</a>. You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding <code>0x</code> to the beginning.</p><p id="40ee7e66-2bc2-4ae4-ab2f-74a208208060" class="">Here’s an example of creating an account in the console using GETH’s <code>personal_newAccount</code></p><pre id="563a43c3-f1f3-4b69-9069-ff0c7a2d2805" class="code code-wrap"><code>&gt; personal.newAccount()
+	Passphrase:
+	Repeat passphrase:
+	&quot;0x5e97870f263700f46aa00d967821199b9bc5a120&quot;
+	
+	&gt; personal.newAccount(&quot;h4ck3r&quot;)
+	&quot;0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc&quot;</code></pre><p id="8972f7cb-d40a-42f0-8914-134f634b5970" class="">
+</p><p id="bec04ce3-5c6d-4370-9542-0da486a7fa61" class="">It is possible to derive new public keys from your private key but you cannot derive a private key from public keys. This means it&#x27;s vital to keep a private key safe and, as the name suggests, <strong>PRIVATE</strong>.</p><p id="b752adbe-cae0-427e-b36d-cd881a742bea" class="">You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.</p><h2 id="ee8b2715-fb22-4276-a35e-0bf7eca10b53" class="">CONTRACT ACCOUNTS</h2><hr id="6065440b-3328-4ccd-a433-82b06d948cf2"/><p id="bd5bd196-14fd-4ccb-b0a3-b988901f4afa" class="">Contract accounts also have a 42 character hexadecimal address:</p><p id="13705c6c-91e3-4a14-97a5-70a1433e5de1" class=""><code>0x06012c8cf97bead5deae237070f9587f8e7a266d</code></p><p id="4a0d84f8-6db2-4d85-8b58-2ae413239d43" class="">The contract address is usually given when a contract is deployed to the Ethereum Blockchain. The address comes from the creator&#x27;s address and the number of transactions sent from that address (the “nonce”).</p><h2 id="ffda2d07-95f6-4dd1-a7e1-203666e8d0d6" class=""><strong>A NOTE ON WALLETS</strong></h2><hr id="09280bf9-74ed-454f-bb94-782d3b70b98b"/><p id="99a62518-46a0-4158-83bd-3982edf59538" class="">An account is not a wallet. An account is the keypair for a user-owned Ethereum account. A wallet is an interface or application that lets you interact with your Ethereum account.</p><figure id="cdfc3496-ff26-473f-aa48-fb6cf8431e80"><div class="source"><a href="https://youtu.be/QJ010l-pBpE">https://youtu.be/QJ010l-pBpE</a></div></figure><figure id="b8154dac-520b-4dc9-86c1-3adb1f10ec54"><div class="source"><a href="https://youtu.be/9LtBDy67Tho">https://youtu.be/9LtBDy67Tho</a></div></figure><h1 id="664f52ff-5efb-45e8-b033-c8a55c2c39d5" class="">TRANSACTIONS</h1><p id="dca49506-db2c-400a-ad56-6737852ac902" class="">Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to other.</p><h2 id="d092a9ff-da34-4db1-835c-a2cf6cd6824e" class="">WHAT’S A TRANSACTION?</h2><hr id="7bc6daf1-678a-47c5-82ae-c5ae3a5dc4a5"/><p id="989152e2-2df6-4432-8809-af20456a104e" class="">An Ethereum transaction refers to an action initiated by an externally-owned account, in other words an account managed by a human, not a contract. For example, if Bob sends Alice 2 ETH, Bob’s account must be debited and Alice’s must be credited. This state-changing action takes place within a transaction.</p><figure id="a0ac5e93-df8c-4c7d-98dc-55131cac3e67" class="image"><a href="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 1.png"><img style="width:720px" src="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 1.png"/></a></figure><p id="ec1c1c41-19e0-4029-9be5-fb16135e634e" class="">Transactions, which never change the state of the EVM, need to be broadcast to the whole network. Any node can broadcast a request for a transaction to be executed on the whole EVM; after this happens, a miner will execute the transaction and propagate the resulting state change to the rest of the network.</p><p id="2c31eba2-fcce-4f34-b832-45baa9a0aaaa" class="">Transactions require a fee and must be mined to become valid.</p><p id="150c8a78-e259-43ef-9c31-7ea54ea08104" class="">A submitted transaction includes the following information:</p><ul id="f194eb78-4dee-4353-ae98-2e05a71f3129" class="bulleted-list"><li style="list-style-type:disc"><code>recipient</code> - the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)</li></ul><ul id="84f2418c-13aa-4932-8227-8a0ba68719a6" class="bulleted-list"><li style="list-style-type:disc"><code>signature</code> – the identifier of the sender. This is generated when the sender&#x27;s private key signs the transaction and confirms the sender has authorized this transaction</li></ul><ul id="85026832-8cdf-4090-874f-5f59bc799bb8" class="bulleted-list"><li style="list-style-type:disc"><code>nonce</code> - a sequentially incrementing counter which indicate the transaction number from the account</li></ul><ul id="71a3c4ca-b61c-4e91-a159-df8e5a54ba87" class="bulleted-list"><li style="list-style-type:disc"><code>value</code> - amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)</li></ul><ul id="01e16454-e388-4ff6-a9e7-66bd38abdbe2" class="bulleted-list"><li style="list-style-type:disc"><code>data</code> - optional field to include arbitrary data</li></ul><ul id="d8ec7b63-40b3-4137-a29d-a73515592fce" class="bulleted-list"><li style="list-style-type:disc"><code>gasLimit</code> - the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps</li></ul><ul id="824b8680-f371-466f-b794-d6eb65bc1e77" class="bulleted-list"><li style="list-style-type:disc"><code>maxPriorityFeePerGas</code> - the maximum amount of gas to be included as a tip to the miner</li></ul><ul id="884da4ab-6595-4da2-83df-a118c1f3de06" class="bulleted-list"><li style="list-style-type:disc"><code>maxFeePerGas</code> - the maximum amount of gas willing to be paid for the transaction (inclusive of <code>baseFeePerGas</code> and <code>maxPriorityFeePerGas</code>)</li></ul><p id="7026e296-30b4-4ed9-9902-95f30af57959" class="">
+</p><p id="9e5924e4-da0a-46db-b750-a3da0ff0c985" class="">Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The <code>gasLimit</code>, and <code>maxPriorityFeePerGas</code> determine the maximum transaction fee paid to the miner.</p><p id="2c62dee6-cdd1-4cea-b9cc-c4a4b1e9bebd" class="">The transaction object will look like this:</p><pre id="25fc884f-fc22-4e09-90a0-077bc2e9e5b5" class="code code-wrap"><code>{
+	  from: &quot;0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8&quot;,
+	  to: &quot;0xac03bb73b6a9e108530aff4df5077c2b3d481e5a&quot;,
+	  gasLimit: &quot;21000&quot;,
+	  maxFeePerGas: &quot;300&quot;,
+	  maxPriorityFeePerGas: &quot;10&quot;,
+	  nonce: &quot;0&quot;,
+	  value: &quot;10000000000&quot;
+}</code></pre><p id="3fe077e7-771a-4820-b113-67710d65dcf6" class="">But a transaction object needs to be signed using the sender&#x27;s private key. This proves that the transaction could only have come from the sender and was not sent fraudulently.</p><p id="c9afb318-df07-4a33-88a2-0c35d9e2c213" class="">An Ethereum client like Geth will handle this signing process.</p><p id="5ce133a6-b6a9-47f0-8142-d570ba12cf48" class="">Example <a href="https://eth.wiki/json-rpc/API">JSON-RPC</a> call:</p><pre id="c03cbf3f-7805-41c6-8e75-996b8e75c513" class="code code-wrap"><code>{
+  &quot;id&quot;: 2,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;method&quot;: &quot;account_signTransaction&quot;,
+  &quot;params&quot;: [
+    {
+      &quot;from&quot;: &quot;0x1923f626bb8dc025849e00f99c25fe2b2f7fb0db&quot;,
+      &quot;gas&quot;: &quot;0x55555&quot;,
+      &quot;maxFeePerGas&quot;: &quot;0x1234&quot;,
+      &quot;maxPriorityFeePerGas&quot;: &quot;0x1234&quot;,
+      &quot;input&quot;: &quot;0xabcd&quot;,
+      &quot;nonce&quot;: &quot;0x0&quot;,
+      &quot;to&quot;: &quot;0x07a565b7ed7d7a678680a4c162885bedbb695fe0&quot;,
+      &quot;value&quot;: &quot;0x1234&quot;
+    }
+  ]
+}</code></pre><p id="dc62d88e-4809-4603-8b7f-05105a02b7f2" class="">Example response:</p><pre id="e305da2a-af58-4644-98a0-2f9d7ae4c2fe" class="code code-wrap"><code>{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 2,
+  &quot;result&quot;: {
+    &quot;raw&quot;: &quot;0xf88380018203339407a565b7ed7d7a678680a4c162885bedbb695fe080a44401a6e4000000000000000000000000000000000000000000000000000000000000001226a0223a7c9bcf5531c99be5ea7082183816eb20cfe0bbc322e97cc5c7f71ab8b20ea02aadee6b34b45bb15bc42d9c09de4a6754e7000908da72d48cc7704971491663&quot;,
+    &quot;tx&quot;: {
+      &quot;nonce&quot;: &quot;0x0&quot;,
+      &quot;maxFeePerGas&quot;: &quot;0x1234&quot;,
+      &quot;maxPriorityFeePerGas&quot;: &quot;0x1234&quot;,
+      &quot;gas&quot;: &quot;0x55555&quot;,
+      &quot;to&quot;: &quot;0x07a565b7ed7d7a678680a4c162885bedbb695fe0&quot;,
+      &quot;value&quot;: &quot;0x1234&quot;,
+      &quot;input&quot;: &quot;0xabcd&quot;,
+      &quot;v&quot;: &quot;0x26&quot;,
+      &quot;r&quot;: &quot;0x223a7c9bcf5531c99be5ea7082183816eb20cfe0bbc322e97cc5c7f71ab8b20e&quot;,
+      &quot;s&quot;: &quot;0x2aadee6b34b45bb15bc42d9c09de4a6754e7000908da72d48cc7704971491663&quot;,
+      &quot;hash&quot;: &quot;0xeba2df809e7a612a0a0d444ccfa5c839624bdc00dd29e3340d46df3870f8a30e&quot;
+    }
+  }
+}</code></pre><ul id="39c98380-a56f-4e9b-bbbd-8e950e6edc66" class="bulleted-list"><li style="list-style-type:disc">the <code>raw</code> is the signed transaction in Recursive Length Prefix (RLP) encoded form</li></ul><ul id="531d139e-f8f5-4779-b419-c203ff24ee34" class="bulleted-list"><li style="list-style-type:disc">the <code>tx</code> is the signed transaction in JSON form</li></ul><p id="dbc3695d-1e8d-4a7d-ae77-3dc59812683d" class="">
+</p><p id="25ccafc4-048c-4e48-af5b-adcf9830045e" class="">With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.</p><h3 id="98ca2e7a-94c9-41dc-a37c-aec3d33d9c70" class="">The data field</h3><p id="88e0290a-909b-486f-92ec-784ca7d0ab5b" class="">The vast majority of transactions access a contract from an externally-owned account. Most contracts are written in Solidity and interpret their data field in accordance with the <a href="https://ethereum.org/en/glossary/#abi">application binary interface (ABI)</a>.</p><p id="290856dc-69d7-4ff8-b91d-ee8183fbe396" class="">The first four bytes specify which function to call, using the hash of the function&#x27;s name and arguments. You can sometimes identify the function from the selector using <a href="https://www.4byte.directory/signatures/">this database</a>.</p><p id="3be58f6d-766a-4ccf-a30f-69ac632154d2" class="">The rest of the calldata is the arguments, <a href="https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding">encoded as specified in the ABI specs</a>.</p><p id="40d891a3-5410-497b-b7ee-0a6557af4332" class="">For example, lets look at <a href="https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1">this transaction</a>. Use <strong>Click to see More</strong> to see the calldata.</p><p id="51063fea-f51f-47f7-9fbf-5a97d19de287" class="">The function selector is <code>0xa9059cbb</code>. There are several <a href="https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb">known functions with this signature</a>. In this case <a href="https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code">the contract source code</a> has been uploaded to Etherscan, so we know the function is <code>transfer(address,uint256)</code>.</p><p id="2fe37eb3-0162-4fd9-99bc-970044549a02" class="">The rest of the data is:</p><pre id="fdbf5b17-c631-45b4-a132-f71efd3afe07" class="code code-wrap"><code>	0000000000000000000000004f6742badb049791cd9a37ea913f2bac38d01279
+	000000000000000000000000000000000000000000000000000000003b0559f4</code></pre><p id="66a7a17f-4e69-4fa9-917f-e4fb781e54f1" class="">According to the ABI specifications, integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front. So we know that the <code>to</code> address is <a href="https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279"><code>4f6742badb049791cd9a37ea913f2bac38d01279</code></a>. The <code>value</code> is 0x3b0559f4 = 990206452.<strong></strong></p><h2 id="6ac57dd1-29e7-45e2-95d1-fc32763eea2b" class=""><strong>TYPES OF TRANSACTIONS</strong></h2><hr id="d8438f1a-b0e9-4d28-b358-1a36ab69f87a"/><p id="fc0a2e13-00fd-4900-8499-c53cc503b9d1" class="">On Ethereum there are a few different types of transactions:</p><ul id="7faed390-9e17-4f99-8e6f-2cc2d006a9fa" class="bulleted-list"><li style="list-style-type:disc"><strong>Regular transactions</strong>: a transaction from one account to another.</li></ul><ul id="41195dac-36aa-426f-a0e9-8fa784ef1181" class="bulleted-list"><li style="list-style-type:disc"><strong>Contract deployment transactions</strong>: a transaction without a &#x27;to&#x27; address, where the data field is used for the contract code.</li></ul><ul id="e672d718-cf14-499e-81a5-cd0dbb575084" class="bulleted-list"><li style="list-style-type:disc"><strong>Execution of a contract</strong>: a transaction that interacts with a deployed smart contract. In this case, &#x27;to&#x27; address is the smart contract address.</li></ul><h3 id="c55c26cc-3731-4145-a6bc-0b55231a9ee6" class=""><strong>On gas</strong></h3><p id="99b71f69-7dbb-4ec0-bd17-4e337bf80325" class="">As mentioned, transactions cost <a href="https://ethereum.org/en/developers/docs/gas/">gas</a> to execute. Simple transfer transactions require 21000 units of Gas.</p><p id="1fc6a0ad-20e8-44dd-a247-785ddbf72eca" class="">So for Bob to send Alice 1 ETH at a <code>baseFeePerGas</code> of 190 gwei and <code>maxPriorityFeePerGas</code> of 10 gwei, Bob will need to pay the following fee:</p><pre id="2d3fa459-b94a-4d31-9960-e08599907d0d" class="code code-wrap"><code>(190 + 10) * 21000 = 4,200,000 gwei
+--or--
+0.0042 ETH</code></pre><p id="5a927bce-1121-4956-a86d-951891e38440" class="">
+</p><p id="4a7a8662-c427-4d8e-aac9-8333b9d2d7c3" class="">Bob&#x27;s account will be debited <strong>-1.0042 ETH</strong></p><p id="4e631b46-ff05-4736-b2b4-48aeadf4b40a" class="">Alice&#x27;s account will be credited <strong>+1.0 ETH</strong></p><p id="feb9460d-6972-4e64-a038-aa289073d968" class="">The base fee will be burned <strong>-0.00399 ETH</strong></p><p id="1d23e97f-9288-4720-b81c-4dde84b80aaa" class="">Miner keeps the tip <strong>+0.000210 ETH</strong></p><p id="b6629bbe-8434-4ed1-a408-36892421395c" class="">Gas is required for any smart contract interaction too.</p><figure id="44a8b876-b0d1-4de7-883e-b4f0c29743db" class="image" style="text-align:left"><a href="FOUNDATIONAL%20TOPICS%200c4d54f62c024c468540eb54bb809930/Untitled%202.png"><img style="width:912px" src="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 2.png"/></a></figure><p id="3281ddc5-f5ae-463d-832e-95d40d87622f" class="">Any gas not used in a transaction is refunded to the user account.</p><h2 id="99f18e98-81b8-459c-8c36-c3e4c9b51280" class=""><strong>TRANSACTION LIFECYCLE</strong></h2><hr id="a4e0066c-fd41-485d-a1c1-27c6304c372b"/><p id="1e8a7137-db3c-465d-88b7-dcb81a15c1ac" class="">Once the transaction has been submitted the following happens:</p><ol type="1" id="9dcc1d65-eed6-4971-aa3f-a559a9dffd10" class="numbered-list" start="1"><li>Once you send a transaction, cryptography generates a transaction hash:<code>0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017</code></li></ol><ol type="1" id="265ddb68-a766-4dd5-a2c9-db02485f44ef" class="numbered-list" start="2"><li>The transaction is then broadcast to the network and included in a pool with lots of other transactions.</li></ol><ol type="1" id="57cfae65-63f2-476c-963b-fa4ded8bb677" class="numbered-list" start="3"><li>A miner must pick your transaction and include it in a block in order to verify the transaction and consider it &quot;successful&quot;.<ul id="49cd809f-9311-41e5-9439-3f3c0cfedfb0" class="bulleted-list"><li style="list-style-type:disc">You may end up waiting at this stage if the network is busy and miners aren&#x27;t able to keep up.</li></ul></li></ol><ol type="1" id="4af5e8d2-0926-48dc-9874-885f50d8322f" class="numbered-list" start="4"><li>Your transaction will receive &quot;confirmations&quot;. The number of confirmations is the number of blocks created since the block that included your transaction. The higher the number, the greater the certainty that the network processed and recognized the transaction.<ul id="93189c58-786a-4f9a-9614-975ee0355a20" class="bulleted-list"><li style="list-style-type:disc">Recent blocks may get re-organized, giving the impression the transaction was unsuccessful; however, the transaction may still be valid but included in a different block.</li></ul><ul id="6bb63ce8-1af0-4e86-a884-34a1b56fcdff" class="bulleted-list"><li style="list-style-type:disc">The probability of a re-organization diminishes with every subsequent block mined, i.e. the greater the number of confirmations, the more immutable the transaction is.</li></ul></li></ol><h2 id="7b015651-a71c-4a4c-bdfa-5743506c257d" class=""><strong>TYPED TRANSACTION ENVELOPE</strong></h2><hr id="a607f58b-6803-4b1b-a05b-83dd5c7be119"/><p id="889406dd-bd1f-4a09-9bd3-6cd01bb853a0" class="">Ethereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:</p><p id="eea48464-e359-411b-b288-55cbbb24ccc9" class=""><code>RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])</code></p><p id="c30b3ed7-13ae-479b-95d8-3f9094327a2f" class="">Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md">EIP-1559</a> to be implemented without affecting legacy transaction formats.</p><p id="592316c9-98f2-40e0-b517-e8cd602c32ad" class=""><a href="https://eips.ethereum.org/EIPS/eip-2718">EIP-2718: Typed Transaction Envelope</a> defines a transaction type that is an envelope for future transaction types.</p><p id="2d03f897-d0a6-43b8-8ae9-45d575b492f3" class="">EIP-2718 is a new generalised envelope for typed transactions. In the new standard, transactions are interpreted as:</p><p id="078ea32b-cb0d-4d60-9bc7-cb8891d9ca4a" class=""><code>TransactionType || TransactionPayload</code></p><p id="ded8a8ca-c35e-4c6c-a9f4-6314784558ce" class="">Where the fields are defined as:</p><ul id="f2035b60-f060-4ce1-bb66-b5212227fe4c" class="bulleted-list"><li style="list-style-type:disc"><code>TransactionType</code> - a number between 0 and 0x7f, for a total of 128 possible transaction types.</li></ul><ul id="67762fa6-4064-433d-85da-95b35ab69712" class="bulleted-list"><li style="list-style-type:disc"><code>TransactionPayload</code> - an arbitrary byte array defined by the transaction type.</li></ul><h1 id="7a2eec10-f1dc-4213-8aa7-d3bb19f20fc8" class="">BLOCKS</h1><p id="f79a2e03-3baa-4b5e-98ae-e8a4d23cbb38" class="">Blocks are batches of transactions with a hash of the previous block in the chain. This links blocks together (in a chain) because hashes are cryptographically derived from the block data. This prevents fraud, because one change in any block in history would invalidate all the following blocks as all subsequent hashes would change and everyone running the blockchain would notice.<strong></strong></p><h2 id="2d017e5b-183f-48dd-9df7-bec37c34def2" class=""><strong>WHY BLOCKS?</strong></h2><hr id="4638852f-9c9e-4c22-8dfa-680269624eef"/><p id="07a41e44-1992-430e-9b92-a348319b5d8b" class="">To ensure that all participants on the Ethereum network maintain a synchronized state and agree on the precise history of transactions, we batch transactions into blocks. This means dozens (or hundreds) of transactions are committed, agreed on, and synchronized all at once.</p><figure id="ba1e6a25-63ac-4b98-9f8f-420e20479387" class="image"><a href="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 3.png"><img style="width:768px" src="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 3.png"/></a></figure><p id="d3863d66-348f-4978-a6e0-d1ac29be9b6e" class="">By spacing out commits, we give all network participants enough time to come to consensus: even though transaction requests occur dozens of times per second, blocks on Ethereum are committed approximately once every fifteen seconds.<strong></strong></p><h2 id="2ea91bf7-cfde-4a8b-aa33-98209a59902f" class=""><strong>HOW BLOCKS WORK</strong></h2><hr id="05cf16ae-a8ff-4f3e-8d38-d148f0485e17"/><p id="0103be95-7870-4ccd-9236-5abc2cabb67f" class="">To preserve the transaction history, blocks are strictly ordered (every new block created contains a reference to its parent block), and transactions within blocks are strictly ordered as well. Except in rare cases, at any given time, all participants on the network are in agreement on the exact number and history of blocks, and are working to batch the current live transaction requests into the next block.</p><p id="7ebe47da-710f-4c07-bb77-e666ea723617" class="">Once a block is put together (mined) by some miner on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and mining continues. The exact block-assembly (mining) process and commitment/consensus process is currently specified by Ethereum’s “proof-of-work” protocol.</p><h2 id="3ad01f65-6bf2-4825-bf4e-3fc210174a82" class=""><strong>PROOF-OF-WORK PROTOCOL</strong></h2><hr id="db8ca6a6-71ca-4f37-91ae-eb7d26ad45aa"/><p id="18a5c99b-fb3b-40d0-80de-48d50c0fdd61" class="">Proof-of-work means the following:</p><ul id="db3b1582-02ad-448e-aa74-9d7b2dea635d" class="bulleted-list"><li style="list-style-type:disc">Mining nodes have to spend a variable but substantial amount of energy, time, and computational power to produce a “certificate of legitimacy” for a block they propose to the network. This helps protect the network from spam/denial-of-service attacks, among other things, since certificates are expensive to produce.</li></ul><ul id="c3e4a6c6-1baf-4210-8a38-02c3bf25e175" class="bulleted-list"><li style="list-style-type:disc">Other miners who hear about a new block with a valid certificate of legitimacy must accept the new block as the canonical next block on the blockchain.</li></ul><ul id="4c74c8f9-17c4-421a-9dd6-5dbcc8d90f40" class="bulleted-list"><li style="list-style-type:disc">The exact amount of time needed for any given miner to produce this certificate is a random variable with high variance. This ensures that it is unlikely that two miners produce validations for a proposed next block simultaneously; when a miner produces and propagates a certified new block, they can be almost certain that the block will be accepted by the network as the canonical next block on the blockchain, without conflict (though there is a protocol for dealing with conflicts as well in the case that two chains of certified blocks are produced almost simultaneously).</li></ul><h2 id="4e41001a-dcfe-4bcb-b040-0a72f914f589" class=""><strong>WHAT&#x27;S IN A BLOCK?</strong></h2><hr id="17962550-64cb-4d46-938e-a86285ebf249"/><ul id="90fc880c-f973-4f4d-9136-8bdec4f87eeb" class="bulleted-list"><li style="list-style-type:disc"><code>timestamp</code> – the time when the block was mined.</li></ul><ul id="59aad8b9-dd50-4de8-9763-1e627b335ef1" class="bulleted-list"><li style="list-style-type:disc"><code>blockNumber</code> – the length of the blockchain in blocks.</li></ul><ul id="e0d53e2d-9f0e-4d97-bc1f-7eb8df35116d" class="bulleted-list"><li style="list-style-type:disc"><code>baseFeePerGas</code> - the minimum fee per gas required for a transaction to be included in the block.</li></ul><ul id="9a054956-73ca-4ad9-9898-8afd5875fecf" class="bulleted-list"><li style="list-style-type:disc"><code>difficulty</code> 
+	– 
+	the effort required to mine the block.</li></ul><ul id="bcecbc00-a7d8-46fb-bccb-db7825c5df23" class="bulleted-list"><li style="list-style-type:disc"><code>mixHash</code> – a unique identifier for that block.</li></ul><ul id="be1aeb0d-6e1b-45db-8e9b-372ffa4bedeb" class="bulleted-list"><li style="list-style-type:disc"><code>parentHash</code> – the unique identifier for the block that came before (this is how blocks are linked in a chain).</li></ul><ul id="b8db2537-3023-4cf3-8949-90a28618462f" class="bulleted-list"><li style="list-style-type:disc"><code>transactions</code> – the transactions included in the block.</li></ul><ul id="55b7a769-0e06-4490-a7cb-2a12549c9d19" class="bulleted-list"><li style="list-style-type:disc"><code>stateRoot</code> – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.</li></ul><ul id="dbb7447e-f120-4968-9f3e-2ac2d670c0e8" class="bulleted-list"><li style="list-style-type:disc"><code>nonce</code> – a hash that, when combined with the mixHash, proves that the block has gone through <a href="https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/">proof-of-work</a>.</li></ul><h2 id="e84b9e5d-4163-4300-ab80-af75ad393200" class=""><strong>BLOCK TIME</strong></h2><hr id="d7642d93-c7c0-45c1-8864-375b68285244"/><p id="68d2f501-a946-4fe6-9283-3d6c1342c0d0" class="">Block time refers to the time it takes to mine a new block. In Ethereum, the average block time is between 12 to 14 seconds and is evaluated after each block. The expected block time is set as a constant at the protocol level and is used to protect the network&#x27;s security when the miners add more computational power. The average block time gets compared with the expected block time, and if the average block time is higher, then the difficulty is decreased in the block header. If the average block time is smaller, then the difficulty in the block header will be increased.</p><h2 id="6c58de2f-09f7-4f2a-aac9-5041f8f07ba9" class=""><strong>BLOCK SIZE</strong></h2><hr id="2da62fa5-51c9-4d25-8dea-312131f3d8de"/><p id="03442dd8-f4ba-48b1-8052-c7005cb2a463" class="">A final important note is that blocks themselves are bounded in size. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 30 million gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements.</p><h1 id="3ef0cab4-ad08-4549-9791-aa4b33f377ff" class="">ETHEREUM VIRTUAL MACHINE (EVM)</h1><p id="60881131-c1b7-415c-ae4e-e80fd986e121" class="">The EVM’s physical instantiation can’t be described in the same way that one might point to a cloud or an ocean wave, but it does <em>exist</em> as one single entity maintained by thousands of connected computers running an Ethereum client.</p><p id="6d761629-b235-4c3e-9333-9199fc3f813d" class="">The Ethereum protocol itself exists solely for the purpose of keeping the continuous, uninterrupted, and immutable operation of this special state machine. It&#x27;s the environment in which all Ethereum accounts and smart contracts live. At any given block in the chain, Ethereum has one and only one &#x27;canonical&#x27; state, and the EVM is what defines the rules for computing a new valid state from block to block.</p><h2 id="54bea595-ee89-4bc4-aa34-3589d7655ed1" class=""><strong>FROM LEDGER TO STATE MACHINE</strong></h2><hr id="49d63e49-03b4-4068-9c41-56a6b03c7791"/><p id="eb915193-6a6b-4751-a468-d2bf362e67a0" class="">The analogy of a &#x27;distributed ledger&#x27; is often used to describe blockchains like Bitcoin, which enable a decentralized currency using fundamental tools of cryptography. The ledger maintains a record of activity which must adhere to a set of rules that govern what someone can and cannot do to modify the ledger. For example, a Bitcoin address cannot spend more Bitcoin than it has previously received. These rules underpin all transactions on Bitcoin and many other blockchains.</p><p id="6bb849e3-9391-4e04-8feb-529d5d5d2786" class="">While Ethereum has its own native cryptocurrency (Ether) that follows almost exactly the same intuitive rules, it also enables a much more powerful function: <a href="https://ethereum.org/en/developers/docs/smart-contracts/">smart contracts</a>. For this more complex feature, a more sophisticated analogy is required. Instead of a distributed ledger, Ethereum is a distributed <a href="https://wikipedia.org/wiki/Finite-state_machine">state machine</a>. Ethereum&#x27;s state is a large data structure which holds not only all accounts and balances, but a <em>machine state</em>, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.</p><figure id="cc2f7298-bf2e-46f3-ae2e-8bcc910d29e0" class="image"><a href="FOUNDATIONAL%20TOPICS%200c4d54f62c024c468540eb54bb809930/Untitled%204.png"><img style="width:1080px" src="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 4.png"/></a></figure><h2 id="90f21ead-c424-485a-85f4-c5ce83da903a" class=""><strong>THE ETHEREUM STATE TRANSITION FUNCTION</strong></h2><hr id="a3ca34cf-f3e3-4afd-ac8b-96e1265a04cb"/><p id="36ad5474-9c86-43aa-94a3-4cf09a91fdf1" class="">The EVM behaves as a mathematical function would: Given an input, it produces a deterministic output. It therefore is quite helpful to more formally describe Ethereum as having a <strong>state transition function</strong>:</p><pre id="fdea453b-927e-414b-8fd9-42940aa0dd2c" class="code code-wrap"><code>Y(S, T)= S&#x27;</code></pre><p id="38c1610c-2f75-4bd3-a56f-d23aac7b5672" class="">Given an old valid state <code>(S)</code> and a new set of valid transactions <code>(T)</code>, the Ethereum state transition function <code>Y(S, T)</code> produces a new valid output state <code>S&#x27;</code><strong></strong></p><h3 id="9cefe012-543f-43d5-86dc-4b0864911589" class=""><strong>State</strong></h3><p id="ab2d1f8d-b1c8-496c-9f5b-d52d581b3261" class="">In the context of Ethereum, the state is an enormous data structure called a <a href="https://ethereum.org/en/developers/docs/data-structures-and-encoding/patricia-merkle-trie/">modified Merkle Patricia Trie</a>, which keeps all <a href="https://ethereum.org/en/developers/docs/accounts/">accounts</a> linked by hashes and reducible to a single root hash stored on the blockchain.</p><h3 id="8f2d0967-c9af-4e39-ad81-b4bb1bfc3c3b" class=""><strong>Transactions</strong></h3><p id="2ee314dd-fc53-4040-a358-b002a200b4f9" class="">Transactions are cryptographically signed instructions from accounts. There are two types of transactions: those which result in message calls and those which result in contract creation.</p><p id="9e6511e9-55fa-4c72-ae16-9d45eadb827c" class="">Contract creation results in the creation of a new contract account containing compiled <a href="https://ethereum.org/en/developers/docs/smart-contracts/anatomy/">smart contract</a> bytecode. Whenever another account makes a message call to that contract, it executes its bytecode.</p><p id="db752b1d-c9bc-440a-ad8f-faac49cb78bc" class="">
+</p><h2 id="04901947-1eeb-48ff-9afa-f3815908660e" class=""><strong>EVM INSTRUCTIONS</strong></h2><hr id="34a6e15a-b98b-4e5f-9d6e-04334f9995da"/><p id="22d5199e-485e-4b8e-b4c2-24bffe5e35e3" class="">The EVM executes as a <a href="https://wikipedia.org/wiki/Stack_machine">stack machine</a> with a depth of 1024 items. Each item is a 256-bit word, which was chosen for the ease of use with 256-bit cryptography (such as Keccak-256 hashes or secp256k1 signatures).</p><p id="9407108d-5965-4581-bf06-967c7c3a7392" class="">During execution, the EVM maintains a transient <em>memory</em> (as a word-addressed byte array), which does not persist between transactions.</p><p id="cccdd346-8257-4a84-b6ab-1c2b6b9b54ed" class="">Contracts, however, do contain a Merkle Patricia <em>storage</em> trie (as a word-addressable word array), associated with the account in question and part of the global state.</p><p id="bf3841f3-1488-477d-a66d-e8e64e4e7cac" class="">Compiled smart contract bytecode executes as a number of EVM <a href="https://ethereum.org/en/developers/docs/evm/opcodes">opcodes</a>, which perform standard stack operations like <code>XOR</code>, <code>AND</code>, <code>ADD</code>, <code>SUB</code>, etc. The EVM also implements a number of blockchain-specific stack operations, such as <code>ADDRESS</code>, <code>BALANCE</code>, <code>BLOCKHASH</code>, etc.</p><figure id="2df6ab2b-4fac-477b-95d1-511538a9bc7d" class="image"><a href="FOUNDATIONAL%20TOPICS%200c4d54f62c024c468540eb54bb809930/Untitled%205.png"><img style="width:864px" src="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 5.png"/></a></figure><h1 id="4cca3add-4619-485c-9d40-7a5a82ff4f1e" class="">GAS AND FEES</h1><hr id="4744d46c-5161-4625-a4ef-38500056831e"/><p id="761878e8-7cbe-4b21-9bec-7a2f7f420d9e" class="">Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.<strong></strong></p><h2 id="6af0e464-26b9-4987-aeeb-503e98c33c41" class=""><strong>WHAT IS GAS?</strong></h2><hr id="4b5d9dbd-ba68-4ed1-8c36-4307a8962497"/><p id="b06e8adf-a6c3-4632-b89f-e7438de506dc" class="">Gas refers to the unit that measures the amount of computational effort required to execute specific operations on the Ethereum network.</p><p id="4099e2f0-0cf6-4cb8-895b-88feca588df5" class="">Since each Ethereum transaction requires computational resources to execute, each transaction requires a fee. Gas refers to the fee required to conduct a transaction on Ethereum successfully.</p><figure id="6ffde85b-e620-4e2c-bb7f-b7f73ba8008d" class="image"><a href="FOUNDATIONAL%20TOPICS%200c4d54f62c024c468540eb54bb809930/Untitled%206.png"><img style="width:864px" src="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 6.png"/></a></figure><p id="4ae7358a-ff91-46df-adc7-480fdb5432dd" class="">Gas fees are paid in Ethereum&#x27;s native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10-9 ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei. The word &#x27;gwei&#x27; itself means &#x27;giga-wei&#x27;, and it is equal to 1,000,000,000 wei. Wei itself (named after <a href="https://wikipedia.org/wiki/Wei_Dai">Wei Dai</a>, creator of <a href="https://www.investopedia.com/terms/b/bmoney.asp">b-money</a>) is the smallest unit of ETH.<strong></strong></p><h2 id="3fbfe5a9-4e03-4aae-a289-eeab8c42d4d0" class=""><strong>PRIOR TO THE LONDON UPGRADE</strong></h2><hr id="7fc13263-3120-4af0-bc4b-0578e9271419"/><p id="d17f571c-fe12-440c-9831-2aa2b97c7313" class="">The way transaction fees on the Ethereum network were calculated changed with <a href="https://ethereum.org/en/history/#london">the London Upgrade</a> of August 2021. Here is a recap of how things used to work:</p><p id="a6025ad7-4dc2-4ca8-b763-a201bb65e21c" class="">Let&#x27;s say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,000 units, and the gas price is 200 gwei.</p><p id="aa88d447-4396-4b47-8f43-dbfe47d9a5a4" class="">Total fee would have been: <code>Gas units (limit) * Gas price per unit</code> i.e <code>21,000 * 200 = 4,200,000 gwei</code> or 0.0042 ETH</p><p id="2baef9de-f762-401d-af76-f8af727e9790" class="">When Alice sent the money, 1.0042 ETH would be deducted from Alice&#x27;s account. Bob would be credited 1.0000 ETH. Miner would receive 0.0042 ETH.</p><h2 id="bcaf5fcd-34fc-4c57-baeb-76ac235fd57a" class=""><strong>AFTER THE LONDON UPGRADE</strong></h2><hr id="6b4a9e28-04bc-4ee4-9247-eb4b1149b6ae"/><p id="9546db90-2c45-4619-955c-391b101f6244" class=""><a href="https://ethereum.org/en/history/#london">The London Upgrade</a> was implemented on August 5th, 2021, to make transacting on Ethereum more predictable for users by overhauling Ethereum&#x27;s transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.</p><p id="c5bf2bc0-f56c-411f-9c9f-ea2793df105c" class="">Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network based on demand for block space. As the base fee of the transaction fee is burnt, users are also expected to set a tip (priority fee) in their transactions. The tip compensates miners for executing and propagating user transactions in blocks and is expected to be set automatically by most wallets.</p><p id="16461263-2b6d-4b43-943c-93cbeffaaab1" class="">Calculating the total transaction fee works as follows: <code>Gas units (limit) * (Base fee + Tip)</code></p><p id="e728d999-4166-4505-a83b-1dfc20546974" class="">Let&#x27;s say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.</p><p id="7b0a89a2-e78d-47f9-bd15-bae53f2f6e96" class="">Using the formula above we can calculate this as <code>21,000 * (100 + 10) = 2,310,000 gwei</code> or 0.00231 ETH.</p><p id="52602e92-6450-4888-a9ed-36fd12cbcba5" class="">When Jordan sends the money, 1.00231 ETH will be deducted from Jordan&#x27;s account. Taylor will be credited 1.0000 ETH. Miner receives the tip of 0.00021 ETH. Base fee of 0.0021 ETH is burned.</p><p id="05fd1e8a-937e-43b5-b973-026fe00e035d" class="">Additionally, Jordan can also set a max fee (<code>maxFeePerGas</code>) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. <code>refund = max fee - (base fee + priority fee)</code>. Jordan can set a maximum amount to pay for the transaction to execute and not worry about overpaying &quot;beyond&quot; the base fee when the transaction is executed.</p><h3 id="35b6f973-52f9-411d-9cce-ca8737090b83" class=""><strong>Block size</strong></h3><p id="44d70af9-def6-4962-8407-7a4543aff1a0" class="">Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at total capacity. As a result, users often had to wait for high demand to reduce to get included in a block, which led to a poor user experience.</p><p id="16f40638-1741-4ec0-a8ab-d9ddbf321841" class="">The London Upgrade introduced variable-size blocks to Ethereum. Each block has a target size of 15 million gas, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of <em>tâtonnement</em>. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount by which the base fee is adjusted is proportional to how far the current block size is from the target. <a href="https://ethereum.org/en/developers/docs/blocks/">More on blocks</a>.</p><h3 id="cb3450d1-7f6e-44ea-a4db-abda94c9bc20" class=""><strong>Base fee</strong></h3><p id="1ab99846-a9c7-452d-9901-8a194113cb2a" class="">Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is mined this base fee is &quot;burned&quot;, removing it from circulation.</p><p id="e7517c0f-362c-49bd-92dd-937573e23654" class="">The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size. The base fee will increase by a maximum of 12.5% per block if the target block size is exceeded. This exponential growth makes it economically non-viable for block size to remain high indefinitely.<div class="indented"><table id="19ec6ce2-9d71-4238-804e-bb5f128cad26" class="simple-table"><thead class="simple-table-header"><tr id="84c02842-fb03-4e2a-a297-b317eeee70c3"><th id="rum}" class="simple-table-header-color simple-table-header"><strong>Block Number</strong></th><th id="&gt;&lt;JS" class="simple-table-header-color simple-table-header"><strong>Included Gas</strong></th><th id="b^Ui" class="simple-table-header-color simple-table-header"><strong>Fee Increase</strong></th><th id="a[}C" class="simple-table-header-color simple-table-header" style="width:179.609375px"><strong>Current Base Fee</strong></th></tr></thead><tbody><tr id="6dbc397c-4411-4179-be0e-6c5c0402972a"><td id="rum}" class="">1</td><td id="&gt;&lt;JS" class="">15M</td><td id="b^Ui" class="">0%</td><td id="a[}C" class="" style="width:179.609375px">100 gwei</td></tr><tr id="64de52
+	e1-aa83-4306-ad38-7672d38a5bf0"><td id="rum}" class="">2</td><td id="&gt;&lt;JS" class="">30M</td><td id="b^Ui" class="">0%</td><td id="a[}C" class="" style="width:179.609375px">100 gwei</td></tr><tr id="335b8b05-14f5-4b85-b853-c5a852f15dea"><td id="rum}" class="">3</td><td id="&gt;&lt;JS" class="">30M</td><td id="b^Ui" class="">12.5%</td><td id="a[}C" class="" style="width:179.609375px">112.5 gwei</td></tr><tr id="4b4601c2-dfe5-4f12-b965-bcff961641c9"><td id="rum}" class="">4</td><td id="&gt;&lt;JS" class="">30M</td><td id="b^Ui" class="">12.5%</td><td id="a[}C" class="" style="width:179.609375px">126.6 gwei</td></tr><tr id="2f48cc68-4808-4185-bab3-324d2e362098"><td id="rum}" class="">5</td><td id="&gt;&lt;JS" class="">30M</td><td id="b^Ui" class="">12.5%</td><td id="a[}C" class="" style="width:179.609375px">142.4 gwei</td></tr><tr id="1dae226d-7d0d-49d5-ba29-06ec73d2efb5"><td id="rum}" class="">6</td><td id="&gt;&lt;JS" class="">30M</td><td id="b^Ui" class="">12.5%</td><td id="a[}C" class="" style="width:179.609375px">160.2 gwei</td></tr><tr id="83ed757e-f96a-4e77-99cb-4feee05ae1f6"><td id="rum}" class="">7</td><td id="&gt;&lt;JS" class="">30M</td><td id="b^Ui" class="">12.5%</td><td id="a[}C" class="" style="width:179.609375px">180.2 gwei</td></tr><tr id="bda4addd-4497-4bfd-9edc-1dbd39f1053b"><td id="rum}" class="">8</td><td id="&gt;&lt;JS" class="">30M</td><td id="b^Ui" class="">12.5%</td><td id="a[}C" class="" style="width:179.609375px">202.7 gwei</td></tr></tbody></table></div></p><p id="d1aa3cad-922c-4363-a6ce-b4677937f434" class="">Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the <strong>maximum base fee </strong>to be added to the next block is <code>current base fee * 112.5%</code> or <code>202.8 gwei * 112.5% = 228.1 gwei</code>.</p><p id="cb7f87d0-17ea-47a8-9a37-1ef90d052ac4" class="">It&#x27;s also important to note it is unlikely we will see extended spikes of full blocks because of the speed at which the base fee increases proceeding a full block.<div class="indented"><table id="e3b539d2-d98e-41bb-a840-0d4c9ade5b1c" class="simple-table"><thead class="simple-table-header"><tr id="1bdb6c6c-0558-43a5-aaf5-c3e1fc0f7b13"><th id="j|jM" class="simple-table-header-color simple-table-header"><strong>Block Number</strong></th><th id="C[NI" class="simple-table-header-color simple-table-header"><strong>Included Gas</strong></th><th id="T}?V" class="simple-table-header-color simple-table-header"><strong>Fee Increase</strong></th><th id="AL~u" class="simple-table-header-color simple-table-header"><strong>Current Base Fee</strong></th></tr></thead><tbody><tr id="aaab1a21-5331-48b8-867d-e215c144ba1c"><td id="j|jM" class="">30</td><td id="C[NI" class="">30M</td><td id="T}?V" class="">12.5%</td><td id="AL~u" class="">2705.6 gwei</td></tr><tr id="6bcacc28-5012-49c7-90aa-570148f2917e"><td id="j|jM" class="">...</td><td id="C[NI" class="">...</td><td id="T}?V" class="">12.5%</td><td id="AL~u" class="">...</td></tr><tr id="8f82638c-730c-4b5b-8961-bd237fa2a766"><td id="j|jM" class="">50</td><td id="C[NI" class="">30M</td><td id="T}?V" class="">12.5%</td><td id="AL~u" class="">28531.3 gwei</td></tr><tr id="57b98f21-dafd-404f-910c-1f6d46d8ea5a"><td id="j|jM" class="">...</td><td id="C[NI" class="">...</td><td id="T}?V" class="">12.5%</td><td id="AL~u" class="">...</td></tr><tr id="085891e0-cd78-4034-90e6-442b76d75b82"><td id="j|jM" class="">100</td><td id="C[NI" class="">30M</td><td id="T}?V" class="">12.5%</td><td id="AL~u" class="">10302608.6 gwei</td></tr></tbody></table></div></p><h3 id="d478d50a-ff78-44ab-ac10-763295342e91" class=""><strong>Priority fee (tips)</strong></h3><p id="dedee9c1-260c-496c-a63e-7a9f4dd46a30" class="">Before the London Upgrade, miners would receive the total gas fee from any transaction included in a block.</p><p id="b6bf401d-febe-4afe-9da7-c04e9c024ce6" class="">With the new base fee getting burned, the London Upgrade introduced a priority fee (tip) to incentivize miners to include a transaction in the block. Without tips, miners would find it economically viable to mine empty blocks, as they would receive the same block reward. Under normal conditions, a small tip provides miners a minimal incentive to include a transaction. For transactions that need to get preferentially executed ahead of other transactions in the same block, a higher tip will be necessary to attempt to outbid competing transactions.</p><h3 id="66af4716-fe60-4ecf-8e08-57f791e9599b" class=""><strong>Max fee</strong></h3><p id="19415d1d-0d06-4888-b9ba-e187d96bf016" class="">To execute a transaction on the network, users can specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the <code>maxFeePerGas</code>. For a transaction to be executed, the max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.</p><h3 id="18cd7896-5b54-4afa-bafe-7c96659345cd" class=""><strong>Calculating fees</strong></h3><p id="217acf1f-080f-4dd2-ac08-f85ebeb65dd7" class="">One of the main benefits of the London upgrade is improving the user&#x27;s experience when setting transaction fees. For wallets that support the upgrade, instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee (base fee + recommended priority fee) to reduce the amount of complexity burdened onto their users.</p><h2 id="cfe8ffd9-4fdd-456e-9f1b-6accf85f4b60" class=""><strong>EIP-1559</strong></h2><hr id="97f9b0b3-24db-4fda-aa35-78d041321ce6"/><p id="1adb53b0-c5f0-441d-90c0-cca95c186573" class="">The implementation of <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md">EIP-1559</a> in the London Upgrade made the transaction fee mechanism more complex than the previous gas price auction, but it has the advantage of making gas fees more predictable, resulting in a more efficient transaction fee market. Users can submit transactions with a <code>maxFeePerGas</code>corresponding to how much they are willing to pay for the transaction to be executing, knowing that they will not pay more than the market price for gas (<code>baseFeePerGas</code>), and get any extra, minus their tip, refunded.</p><p id="83b84b45-e901-495b-9e3a-d483c672fc6a" class="">This video explains EIP-1559 and the benefits it brings:</p><h2 id="486b8ebe-d5e6-47b0-88c6-fc38874e0bb5" class=""><strong>WHY DO GAS FEES EXIST?</strong></h2><hr id="30254390-378b-4648-b4c2-684818e450ad"/><p id="743236dc-65b1-49d0-ba08-bc99dde019d6" class="">In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent bad actors from spamming the network. In order to avoid accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is &quot;gas&quot;.</p><p id="98292b07-e93b-412b-8a89-49ae25245b05" class="">Although a transaction includes a limit, any gas not used in a transaction is returned to the user (i.e. <code>max fee - (base fee + tip)</code> is returned).</p><figure id="c14c7af9-524c-41ff-8ade-4c882e29824f" class="image"><a href="./img/FOUNDATIONAL TOPICS 0c4d54f62c024c468540eb54bb809930/Untitled 7.png"><img style="width:816px" src="FOUNDATIONAL%20TOPICS%200c4d54f62c024c468540eb54bb809930/Untitled%207.png"/></a></figure><h2 id="73d927df-0d61-496f-9a87-0b7f1aec6504" class=""><strong>WHAT IS GAS LIMIT?</strong></h2><hr id="e208dba5-c32e-4271-a0aa-452b1785ccb0"/><p id="ccd4eff0-25af-4d66-a423-49aeb85117fc" class="">Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. More complicated transactions involving <a href="https://ethereum.org/en/developers/docs/smart-contracts/">smart contracts</a> require more computational work, so they require a higher gas limit than a simple payment. A standard ETH transfer requires a gas limit of 21,000 units of gas.</p><p id="04434f25-02ac-40b3-ad1c-2d5741bdc95e" class="">For example, if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specify too little gas, for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units attempting to fulfill the transaction, but it will not complete. The EVM then reverts any changes, but since the miner has already done 20k gas units worth of work, that gas is consumed.</p><h2 id="9d37a9d8-154f-4147-8a45-5b6cfd868247" class=""><strong>WHY CAN GAS FEES GET SO HIGH?</strong></h2><hr id="f299ad2c-5b9a-458c-b5eb-4719c6da925d"/><p id="d75c7693-e0ae-4dc1-8146-0154b5902198" class="">High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas, and gas space is limited per block. Fees include calculations, storing or manipulating data, or transferring tokens, consuming different amounts of &quot;gas&quot; units. As dapp functionality grows more complex, the number of operations a smart contract performs also grows, meaning each transaction takes up more space of a limited size block. If there&#x27;s too much demand, users must offer a higher tip amount to try and outbid other users&#x27; transactions. A higher tip can make it more likely that your transaction will get into the next block.</p><p id="803ce0e0-6680-4c8c-a60c-937ca42ba6ab" class="">Gas price alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee, we have to multiply the gas used by the transaction fee, which is measured in gwei.</p><p id="96899369-5cbd-46d3-9fbd-55f0ed33f334" class="">
+</p></div></article></body></html>
