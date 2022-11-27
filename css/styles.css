@@ -678,12 +678,14 @@ img {
 
 /*==================== QUALIFICATION ====================*/
 .qualification__title-education{
+  color: var(--text-color);
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   transition: ease-in-out .2s;
 }
 
 .qualification__title-work{
+  color: var(--text-color);
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   transition: ease-in-out .2s;
