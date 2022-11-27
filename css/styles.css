@@ -12,8 +12,10 @@
 
     /* HSL color mode */
     --first-color: #5E5CE6;
+    --first-color-hover: #4847b2;
     --first-color-alt: #7B7BEB;
     --first-color-second: #2CB67D;
+    --first-color-second-hover: #259365;
     --paragraph: #94A1B2;
     --article-paragraph: #979797;
     --article-subtitle: #5F5F5F;
@@ -595,15 +597,15 @@ img {
 }
 
 .skills__HTML{
-  width: 65%;
+  width: 90%;
 }
 
 .skills__CSS{
-  width: 40%;
+  width: 80%;
 }
 
 .skills__javascript{
-  width: 35%;
+  width: 40%;
 }
 
 .skills__swift{
@@ -619,15 +621,15 @@ img {
 }
 
 .skills__sketch{
-  width: 40%;
+  width: 20%;
 }
 
 .skills__photoshop{
-  width: 65%;
+  width: 55%;
 }
 
 .skills__aftereffects{
-  width: 30%;
+  width: 20%;
 }
 
 .skills__premiere{
@@ -635,19 +637,27 @@ img {
 }
 
 .skills__procreate{
-  width: 90%;
-}
-
-.skills__crypto{
-  width: 90%;
+  width: 80%;
 }
 
 .skills__nft{
+  width: 65%;
+}
+
+.skills__solana{
+  width: 30%;
+}
+
+.skills__crypto{
   width: 75%;
 }
 
-.skills__solidity{
-  width: 20%;
+.skills__tradingview{
+  width: 70%;
+}
+
+.skills__stocks{
+  width: 30%;
 }
 
 .skills__close .skills__list{
@@ -667,15 +677,26 @@ img {
 
 
 /*==================== QUALIFICATION ====================*/
-.qualification__title{
+.qualification__title-education{
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   transition: ease-in-out .2s;
 }
 
-.qualification__title:hover{
-  color:#2CB67D;
+.qualification__title-work{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  transition: ease-in-out .2s;
 }
+
+.qualification__title-education:hover{
+  color: var(--first-color);
+}
+
+.qualification__title-work:hover{
+  color: var(--first-color-second);
+}
+
 
 .qualification__subtitle{
   display: inline-block;
@@ -708,8 +729,17 @@ img {
   cursor: pointer;
 }
 
-.qualification__button:hover{
+.education__button{
   background-color: var(--first-color);
+}
+
+
+.education__button:hover{
+  background-color: var(--first-color-hover);
+}
+
+.work__button:hover{
+  background-color: var(--first-color-second-hover);
 }
 
 .qualification__icon{
