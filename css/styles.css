@@ -444,6 +444,7 @@ img {
   font-size: medium;
   cursor: pointer;
   width: 90px;
+  border: hidden;
 }
 
 .button--submit:hover{
