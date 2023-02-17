@@ -596,11 +596,11 @@ img {
 }
 
 .skills__HTML{
-  width: 90%;
+  width: 80%;
 }
 
 .skills__CSS{
-  width: 70%;
+  width: 50%;
 }
 
 .skills__javascript{
@@ -608,11 +608,11 @@ img {
 }
 
 .skills__swift{
-  width: 60%;
+  width: 30%;
 }
 
 .skills__figma{
-  width: 85%;
+  width: 65%;
 }
 
 .skills__webflow{
@@ -624,7 +624,7 @@ img {
 }
 
 .skills__photoshop{
-  width: 50%;
+  width: 40%;
 }
 
 .skills__aftereffects{
@@ -632,7 +632,7 @@ img {
 }
 
 .skills__premiere{
-  width: 50%;
+  width: 40%;
 }
 
 .skills__procreate{
@@ -644,7 +644,7 @@ img {
 }
 
 .skills__solana{
-  width: 30%;
+  width: 10%;
 }
 
 .skills__crypto{
@@ -656,7 +656,7 @@ img {
 }
 
 .skills__stocks{
-  width: 30%;
+  width: 20%;
 }
 
 .skills__close .skills__list{
