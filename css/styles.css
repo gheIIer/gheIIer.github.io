@@ -215,6 +215,7 @@ img {
 
 .nav__logo{
   color: var(--first-color);
+  width: 120px;
 }
 
 .nav__logo-img{
